@@ -1,0 +1,17 @@
+{
+  "name": "ncp-bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "pino": "",
+    "path": "",
+    "cfonts": "",
+    "fs-extra": "",
+    "axios": "",
+    "@whiskeysockets/baileys": "",
+    "chalk": "",
+    "qrcode-terminal": ""
+  }
+}
