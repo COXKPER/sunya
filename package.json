@@ -12,6 +12,7 @@
     "axios": "",
     "@whiskeysockets/baileys": "",
     "chalk": "",
-    "qrcode-terminal": ""
+    "qrcode-terminal": "",
+    "https-proxy-agent": ""
   }
 }
