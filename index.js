@@ -39,9 +39,9 @@ async function fetchBlacklist() {
 // AI URL scan function with updated prompt
 async function scanUrlWithAI(link) {
   try {
-    const prompt = `this link is scam or not, link: ${link}, if scam say scam and if not scam say secure message: `;
+    const prompt = `this link is scam or not, link: ${link}, if scam say scam and if not scam say secure  `;
     const response = await axios.get(
-      `https://fastrestapis.fasturl.cloud/ai/gpt4?prompt=${encodeURIComponent(prompt)}`,
+      `https://fastrestapis.fasturl.cloud/ai/gemini/chat?ask=${encodeURIComponent(prompt)}`,
       {
         headers: {
           'accept': 'application/json',
@@ -51,7 +51,7 @@ async function scanUrlWithAI(link) {
         httpsAgent: agent, // Use the proxy agent
       }
     );
-    return response.data.response === 'scam'; // Check for 'scam' response
+    return response.data.response === 'Scam'; // Check for 'scam' response
   } catch (error) {
     console.error('Error fetching from AI URL:', error);
     return false;
