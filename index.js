@@ -3,6 +3,7 @@ const makeWASocket = require('@whiskeysockets/baileys').default;
 const { useMultiFileAuthState } = require('@whiskeysockets/baileys');
 const fs = require('fs');
 const { HttpsProxyAgent } = require('https-proxy-agent');
+const pino = require('pino');
 
 // SOCKS5 Proxy setup
 const proxy = 'socks5://frpax2oj6spziip-country-us:n9y230w2brf7t5w@rp.proxyscrape.com:6060';
