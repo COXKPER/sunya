@@ -33,7 +33,7 @@ module.exports = (register, issenderowner) => {
     .function(async ({ sock, from }) => {
       const sender = from.replace(/[^0-9]/g, "");
 
-      issenderowner(sender).then(async () => {
+      checkOwner(sender).then(async () => {
         await sock.sendMessage(from, { text: "♻️ Restarting bot..." });
         setTimeout(() => {
           process.exit(0); // Let your process manager (pm2 or nodemon) handle restart
