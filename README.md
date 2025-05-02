@@ -68,7 +68,7 @@ register.command(".yourcommand")
 Use this utility to check if sender is an owner:
 
 ```js
-issenderowner(sender).then(() => {
+checkOwner(sender).then(() => {
   // do if owner
 }).else(() => {
   // do if not owner
