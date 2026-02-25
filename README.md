@@ -1,5 +1,7 @@
 # Sunya WhatsApp Bot
 
+![banner](https://files.catbox.moe/t2w6c0.png)
+
 A modular WhatsApp bot built with [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys).
 Supports dynamic plugin loading, owner-only commands, and a built-in `.menu` system.
 
