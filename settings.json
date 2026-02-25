@@ -1,5 +1,6 @@
 {
   "botname": "Sunya Bot",
+  "prefix": ".",
   "botbanner": "https://files.catbox.moe/luftrz.png",
   "owner": ["628123456789"]
 }

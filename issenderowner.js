@@ -1,18 +1,11 @@
- // issenderowner.js
 const settings = require('./settings.json');
 
-module.exports = function(senderNumber) {
-  const owners = settings.owner.map(v => v.replace(/[^0-9]/g, ''));
-  const isOwner = owners.includes(senderNumber);
+module.exports = function isOwner(senderNumber) {
+  const cleanNumber = senderNumber.replace(/[^0-9]/g, '');
 
-  return {
-    then: function (fn) {
-      if (isOwner) fn();
-      return this;
-    },
-    else: function (fn) {
-      if (!isOwner) fn();
-      return this;
-    }
-  };
+  const owners = settings.owner.map(v =>
+    v.replace(/[^0-9]/g, '')
+  );
+
+  return owners.includes(cleanNumber);
 };
